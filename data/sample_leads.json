@@ -1,0 +1,122 @@
+[
+  {
+    "id": "lead_001",
+    "name": "Acme Corp — Enterprise Expansion",
+    "company": "Acme Corp",
+    "stage": "Negotiation",
+    "deal_value": 185000,
+    "days_since_last_activity": 47,
+    "close_date_days_out": -5,
+    "num_touches": 12,
+    "owner": "Sarah Chen",
+    "notes": "Champion went dark after legal review. Contract almost finalized. High risk of churn."
+  },
+  {
+    "id": "lead_002",
+    "name": "GlobeTech — Platform License",
+    "company": "GlobeTech",
+    "stage": "Proposal",
+    "deal_value": 120000,
+    "days_since_last_activity": 33,
+    "close_date_days_out": 4,
+    "num_touches": 3,
+    "owner": "Marcus Webb",
+    "notes": "Proposal sent 5 weeks ago. No response. Close date approaching. Competitor actively engaged."
+  },
+  {
+    "id": "lead_003",
+    "name": "NovaBuild — Annual Contract",
+    "company": "NovaBuild",
+    "stage": "Qualification",
+    "deal_value": 220000,
+    "days_since_last_activity": 52,
+    "close_date_days_out": 30,
+    "num_touches": 1,
+    "owner": "Sarah Chen",
+    "notes": "Large deal, barely touched. Original intro call happened 2 months ago. Needs revival."
+  },
+  {
+    "id": "lead_004",
+    "name": "Streamline Inc — Renewal",
+    "company": "Streamline Inc",
+    "stage": "Negotiation",
+    "deal_value": 75000,
+    "days_since_last_activity": 5,
+    "close_date_days_out": 6,
+    "num_touches": 18,
+    "owner": "Jordan Park",
+    "notes": "Active negotiation on pricing. Close to signature. Push for close this week."
+  },
+  {
+    "id": "lead_005",
+    "name": "PinPoint Analytics — Pilot",
+    "company": "PinPoint Analytics",
+    "stage": "Proposal",
+    "deal_value": 48000,
+    "days_since_last_activity": 22,
+    "close_date_days_out": 18,
+    "num_touches": 6,
+    "owner": "Marcus Webb",
+    "notes": "Pilot SOW sent. Waiting on procurement approval. Slight delay acceptable."
+  },
+  {
+    "id": "lead_006",
+    "name": "ClearPath Logistics — SMB",
+    "company": "ClearPath Logistics",
+    "stage": "Prospecting",
+    "deal_value": 12000,
+    "days_since_last_activity": 2,
+    "close_date_days_out": 60,
+    "num_touches": 4,
+    "owner": "Jordan Park",
+    "notes": "Early stage, good engagement. Nurture with content."
+  },
+  {
+    "id": "lead_007",
+    "name": "Vortex Systems — Expansion",
+    "company": "Vortex Systems",
+    "stage": "Proposal",
+    "deal_value": 95000,
+    "days_since_last_activity": 14,
+    "close_date_days_out": 21,
+    "num_touches": 9,
+    "owner": "Sarah Chen",
+    "notes": "Expansion deal on existing customer. Positive signals but slow internal approvals."
+  },
+  {
+    "id": "lead_008",
+    "name": "DataHarbor — Enterprise",
+    "company": "DataHarbor",
+    "stage": "Qualification",
+    "deal_value": 310000,
+    "days_since_last_activity": 38,
+    "close_date_days_out": 45,
+    "num_touches": 2,
+    "owner": "Unassigned",
+    "notes": "Largest deal in pipeline. No owner assigned. Critical to claim and activate immediately."
+  },
+  {
+    "id": "lead_009",
+    "name": "MindBridge — Starter Plan",
+    "company": "MindBridge",
+    "stage": "Qualification",
+    "deal_value": 8500,
+    "days_since_last_activity": 7,
+    "close_date_days_out": 30,
+    "num_touches": 5,
+    "owner": "Jordan Park",
+    "notes": "Small deal, healthy engagement. Normal progression."
+  },
+  {
+    "id": "lead_010",
+    "name": "OmniCloud — Security Add-on",
+    "company": "OmniCloud",
+    "stage": "Proposal",
+    "deal_value": 32000,
+    "days_since_last_activity": 3,
+    "close_date_days_out": 14,
+    "num_touches": 11,
+    "owner": "Marcus Webb",
+    "notes": "High-touch deal, good momentum. Security compliance docs pending from customer side."
+  }
+]
