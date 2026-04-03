@@ -192,19 +192,20 @@ Two explicit failure scenarios are handled:
 - **No parallelism for LLM calls**: All 3 LLM agents run sequentially. For large batches (50+ leads), the action step could be parallelized by lead segment.
 - **No CRM integration**: Input is mocked JSON. Real deployment would connect to Salesforce/HubSpot via API.
 - **Token costs scale with lead count**: Sending all leads in one LLM prompt works for 10-20 leads. Larger batches need chunking.
-- **gpt-4o-mini used by default**: Cheaper and fast enough for structured JSON output. Swap to `gpt-4o` via `OPENAI_MODEL` env var for higher quality rationale.
+- **Claude Haiku used by default**: Fast and cost-effective for structured JSON output. Swap model via `ANTHROPIC_MODEL` env var (e.g. `claude-opus-4-5`) or switch to OpenAI by setting `OPENAI_API_KEY` instead.
 
 ---
 
 ## Build Notes (AI-Assisted Development)
 
-- **AI tool used**: Claude Code — used throughout for generating starter code, boilerplate, and written documentation (README, EXPLANATION.md). It produced the initial working skeleton quickly but required significant iteration and hands-on correction.
-- **Where AI accelerated**: Project scaffolding (directory layout, `__init__.py` files), Pydantic model definitions, docstrings, test case scaffolding, and long-form written descriptions. Saved several hours of setup and typing.
+- **AI tool used**: Claude Code — used throughout for generating starter code, boilerplate, and written documentation (most parts of README). It produced the initial working skeleton quickly but required significant iteration and hands-on correction.
+- **Where AI accelerated**: Project scaffolding (directory layout, `__init__.py` files), Pydantic model definitions, docstrings, test case scaffolding, and written descriptions. Saved several hours of setup and typing.
 - **Where AI fell short / needed correction**: The Agno API details were not reliably known by the AI — parameter names like `output_schema` vs `output_model`, the exact `execution_input` parameter name for Workflow steps, and how `RunMetrics` token fields are accessed all required manual inspection of the Agno source and live debugging to get right.
-- **Key bugs caught and fixed personally**: (1) `system_prompt` → `instructions` rename; (2) `output_model` → `output_schema` for structured output; (3) `load_dotenv(override=True)` to override empty system env vars; (4) explicit `id=` in Workflow constructor so Agent OS WebSocket routing works; (5) Agent OS was rendering raw `StepOutput` JSON instead of markdown — diagnosed that Agno renders `Agent` responses as markdown but not `Workflow` outputs, and rewrote `agent_os.py` to wrap the pipeline in an Agent tool; (6) integration tests were skipping because `.env` wasn't loaded before the `skipif` check.
-- **Design decisions made personally**: Keeping Intake as pure Python with no LLM (scores must be deterministic and auditable); separating scoring logic from LLM rationale (LLM can never corrupt the numeric score); the 50% invalid-record threshold for `IntakeError`; the quality-check trigger condition in ReviewAgent; choosing Claude Haiku over GPT-4o-mini for cost vs. quality in this context.
-- **What AI wrote that I verified and kept**: The scoring formula weights (30/30/20/20), the risk flag rules, the Pydantic model structure, most of the agent system prompts, and the test assertions — all reviewed and confirmed to match the intended business logic before keeping.
-- **Honest split**: AI generated all the starter code and prose; I directed the architecture, caught every Agno-specific bug, made all the product judgment calls, and debugged the full end-to-end pipeline to get it actually running.
+- **Key bugs caught and fixed personally**: (1) `output_model` → `output_schema` for structured output; (2) `load_dotenv(override=True)` to override empty system env vars; (4) Agent OS was rendering raw `StepOutput` JSON instead of markdown, diagnosed that Agno renders `Agent` responses as markdown but not `Workflow` outputs, and rewrote `agent_os.py` to wrap the pipeline in an Agent tool; (5) integration tests skipping problem.
+<!-- - **Design decisions made personally**: Keeping Intake as pure Python with no LLM (scores must be deterministic and auditable); separating scoring logic from LLM rationale (LLM can never corrupt the numeric score); the 50% invalid-record threshold for `IntakeError`; the quality-check trigger condition in ReviewAgent; choosing Claude Haiku over GPT-4o-mini for cost vs. quality in this context.
+- **What AI wrote that I verified and kept**: The scoring formula weights (30/30/20/20), the risk flag rules, the Pydantic model structure, most of the agent system prompts, and the test assertions — all reviewed and confirmed to match the intended business logic before keeping. -->
+
+AI generated all the starter code and prose; I directed the architecture, caught bug, made all the product judgment calls, and debugged the full end-to-end pipeline to get it actually running.
 
 ---
 
