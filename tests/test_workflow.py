@@ -1,7 +1,7 @@
 """
 Integration smoke test for the full workflow.
 
-These tests require OPENAI_API_KEY to be set. They call the real LLM.
+These tests require ANTHROPIC_API_KEY to be set. They call the real LLM.
 Skipped automatically if the key is not available.
 """
 from __future__ import annotations
@@ -10,11 +10,15 @@ import json
 import os
 
 import pytest
+from dotenv import load_dotenv
+
+# Load .env BEFORE checking env vars (system env may have empty strings)
+load_dotenv(override=True)
 
 # Skip all tests in this module if no API key is set
 pytestmark = pytest.mark.skipif(
-    not os.getenv("OPENAI_API_KEY"),
-    reason="OPENAI_API_KEY not set — skipping LLM integration tests",
+    not os.getenv("ANTHROPIC_API_KEY"),
+    reason="ANTHROPIC_API_KEY not set — skipping LLM integration tests",
 )
 
 
@@ -60,8 +64,13 @@ SAMPLE_LEADS = [
 
 def test_happy_path_full_pipeline():
     """Run the full pipeline with 3 valid leads and verify structure of output."""
+    import glob as _glob
+    import json as _json
     from app.models.crm_models import OpsReport
     from app.workflows.revops_workflow import create_workflow
+
+    # Snapshot existing output files before running so we can find the new one
+    before = set(_glob.glob("output/report_*.json"))
 
     workflow = create_workflow()
     result = workflow.run(input=SAMPLE_LEADS)
@@ -71,12 +80,11 @@ def test_happy_path_full_pipeline():
         f"Pipeline failed: {getattr(step_output, 'error', 'unknown')}"
     )
 
-    # content is now a markdown string; read the report from the latest JSON file
-    import glob as _glob
-    json_files = sorted(_glob.glob("output/report_*.json"))
-    assert json_files, "No output report JSON found"
-    import json as _json
-    with open(json_files[-1]) as f:
+    # Find the newly created report (not one from a previous run)
+    after = set(_glob.glob("output/report_*.json"))
+    new_files = sorted(after - before)
+    assert new_files, "No new output report JSON was created by this run"
+    with open(new_files[-1]) as f:
         report = OpsReport(**_json.load(f))
     assert report.run_id
     assert report.pipeline_stats.total_leads == 3
