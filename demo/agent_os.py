@@ -72,6 +72,7 @@ and remind them to paste their CRM JSON to run the pipeline.""",
 agent_os = AgentOS(
     name="RevOps Multi-Agent System",
     agents=[agent],
+    workflows=[_workflow],
 )
 
 app = agent_os.get_app()
