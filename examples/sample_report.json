@@ -1,0 +1,155 @@
+{
+  "run_id": "920230d4",
+  "generated_at": "2026-04-02T07:14:28.172119+00:00",
+  "pipeline_stats": {
+    "total_leads": 3,
+    "critical_count": 2,
+    "high_count": 1,
+    "medium_count": 0,
+    "low_count": 0,
+    "total_pipeline_value": 615000.0,
+    "at_risk_value": 615000.0
+  },
+  "ranked_actions": [
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_001",
+          "name": "Acme Corp \u2014 Enterprise",
+          "company": "Acme Corp",
+          "stage": "Negotiation",
+          "deal_value": 185000.0,
+          "days_since_last_activity": 47,
+          "close_date_days_out": -5,
+          "num_touches": 12,
+          "owner": "Sarah Chen",
+          "notes": ""
+        },
+        "score": 66,
+        "risk_level": "high",
+        "risk_flags": [
+          "idle_30_days",
+          "close_date_overdue"
+        ],
+        "score_rationale": "Deal is 5 days overdue and hasn't been touched in 47 days; immediate follow-up needed to salvage this $185K negotiation."
+      },
+      "actions": [
+        {
+          "priority": "immediate",
+          "action_type": "call",
+          "description": "Call Sarah Chen to assess deal status and determine if renegotiation, discount, or contract revision is needed to close the overdue $185K Acme Corp deal",
+          "owner": "Sarah Chen"
+        },
+        {
+          "priority": "immediate",
+          "action_type": "escalate",
+          "description": "Escalate to sales leadership if Acme Corp is unresponsive; prepare win-back strategy or discount offer to recover the stalled negotiation",
+          "owner": "Sales Manager"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "email",
+          "description": "Send executive summary email outlining final terms and next steps, setting a hard deadline for signature to reinvigorate momentum",
+          "owner": "Sarah Chen"
+        }
+      ],
+      "summary": "Immediate leadership intervention and direct outreach required to salvage this overdue $185K negotiation from stalling."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_003",
+          "name": "GlobeTech \u2014 Platform",
+          "company": "GlobeTech",
+          "stage": "Proposal",
+          "deal_value": 120000.0,
+          "days_since_last_activity": 33,
+          "close_date_days_out": 4,
+          "num_touches": 3,
+          "owner": "Marcus Webb",
+          "notes": ""
+        },
+        "score": 49,
+        "risk_level": "critical",
+        "risk_flags": [
+          "idle_30_days",
+          "close_date_imminent"
+        ],
+        "score_rationale": "Close date is 4 days away but no activity in 33 days; critical intervention needed to keep this deal on track or confirm if it's truly closed."
+      },
+      "actions": [
+        {
+          "priority": "immediate",
+          "action_type": "call",
+          "description": "Call Marcus Webb immediately to confirm GlobeTech's proposal status and signature readiness before the 4-day close deadline",
+          "owner": "Marcus Webb"
+        },
+        {
+          "priority": "immediate",
+          "action_type": "meeting",
+          "description": "Schedule emergency call with GlobeTech decision-maker to address any outstanding concerns, objections, or next steps required to close",
+          "owner": "Marcus Webb"
+        },
+        {
+          "priority": "immediate",
+          "action_type": "close",
+          "description": "If GlobeTech is ready, send final contract and coordinate signature; if blocked, identify blocker and deploy discount or escalation as needed",
+          "owner": "Marcus Webb"
+        }
+      ],
+      "summary": "Critical: Urgent intervention required within 48 hours to either close this $120K deal or determine if close date must be revised."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_002",
+          "name": "DataHarbor \u2014 Enterprise",
+          "company": "DataHarbor",
+          "stage": "Qualification",
+          "deal_value": 310000.0,
+          "days_since_last_activity": 38,
+          "close_date_days_out": 45,
+          "num_touches": 2,
+          "owner": "Unassigned",
+          "notes": ""
+        },
+        "score": 43,
+        "risk_level": "critical",
+        "risk_flags": [
+          "idle_30_days",
+          "high_value_early_stage"
+        ],
+        "score_rationale": "High-value $310K opportunity stuck in Qualification with minimal engagement and no owner assigned; needs immediate ownership and acceleration."
+      },
+      "actions": [
+        {
+          "priority": "immediate",
+          "action_type": "escalate",
+          "description": "Assign this unowned $310K DataHarbor opportunity to a senior account executive immediately and schedule discovery kickoff",
+          "owner": "Sales Manager"
+        },
+        {
+          "priority": "immediate",
+          "action_type": "meeting",
+          "description": "Schedule executive qualification meeting with DataHarbor stakeholders within 48 hours to understand requirements, timeline, and decision criteria",
+          "owner": "Account Executive TBD"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "email",
+          "description": "Send personalized outreach introducing assigned account executive and requesting 30-minute call to align on solution fit and next steps",
+          "owner": "Account Executive TBD"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "nurture",
+          "description": "Deliver targeted case study and ROI analysis relevant to DataHarbor's industry segment to demonstrate value and accelerate qualification",
+          "owner": "Account Executive TBD"
+        }
+      ],
+      "summary": "Critical: Immediately assign owner and launch aggressive qualification campaign to accelerate this high-value early-stage opportunity."
+    }
+  ],
+  "executive_summary": "Pipeline health is critical: all three leads ($615K total) are at risk due to extended inactivity (33\u201347 days without engagement) despite active sales effort or imminent close dates. Two deals are overdue or within 4 days of deadline (Acme Corp and GlobeTech), while the largest opportunity (DataHarbor, $310K) remains unowned and stalled in early qualification. Immediate leadership intervention is required across all three accounts to either salvage negotiation momentum, confirm close readiness, or deploy ownership and acceleration resources within the next 48 hours.",
+  "review_notes": "\u2022 DataHarbor ($310K, Unassigned) represents 50% of pipeline value with zero owner accountability and minimal touches (2)\u2014assign a senior AE immediately to prevent further drift. \u2022 Acme Corp deal is 5 days overdue with 47 days of silence; prepare win-back or discount strategy to recover or formally close-lost. \u2022 All three leads show >30 days idle despite varying stages, indicating systemic engagement breakdown\u2014consider pipeline health KPI audit."
+}
