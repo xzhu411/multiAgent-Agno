@@ -19,20 +19,20 @@ CRM JSON Input
          │ List[Lead]
          ▼
 ┌─────────────────────────────┐
-│  Classification Agent       │  Agno Agent (GPT-4o-mini)
+│  Classification Agent       │  Agno Agent (claude)
 │  + scoring_tools (Python)   │  Rule-based score + LLM rationale
 │                             │  Retries up to 3× on bad LLM output
 └────────┬────────────────────┘
          │ List[ScoredLead]
          ▼
 ┌─────────────────┐
-│  Action Agent   │  Agno Agent (GPT-4o-mini)
+│  Action Agent   │  Agno Agent (claude)
 │                 │  2-4 specific actions per lead, tailored to risk level
 └────────┬────────┘
          │ List[ActionItem]
          ▼
 ┌─────────────────────────────┐
-│  Review / Manager Agent     │  Agno Agent (GPT-4o-mini)
+│  Review / Manager Agent     │  Agno Agent (claude)
 │  + self-correction loop     │  Quality check → optional revision → final report
 └─────────────────────────────┘
          │
@@ -77,7 +77,7 @@ pip install -r requirements-dev.txt
 
 # 4. Configure API key
 cp .env.example .env
-# Edit .env and add your OPENAI_API_KEY
+# Edit .env and add your API_KEY
 ```
 
 ---
@@ -109,7 +109,7 @@ python demo/run_demo.py --verbose
 # Run all deterministic tests (no API key needed)
 pytest tests/test_models.py -v
 
-# Run integration tests (requires OPENAI_API_KEY)
+# Run integration tests (requires API_KEY)
 pytest tests/test_workflow.py -v
 
 # Run all
@@ -190,7 +190,7 @@ Two explicit failure scenarios are handled:
 
 - **Scoring formula is static**: The weighted scoring formula is hand-tuned for the demo. A production system would calibrate weights from historical win/loss data.
 - **No parallelism for LLM calls**: All 3 LLM agents run sequentially. For large batches (50+ leads), the action step could be parallelized by lead segment.
-- **No CRM integration**: Input is mocked JSON. Real deployment would connect to Salesforce/HubSpot via API.
+- **No CRM integration**: Input is mocked JSON.
 - **Token costs scale with lead count**: Sending all leads in one LLM prompt works for 10-20 leads. Larger batches need chunking.
 - **Claude Haiku used by default**: Fast and cost-effective for structured JSON output. Swap model via `ANTHROPIC_MODEL` env var (e.g. `claude-opus-4-5`) or switch to OpenAI by setting `OPENAI_API_KEY` instead.
 
