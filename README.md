@@ -6,6 +6,14 @@ A multi-agent Revenue Operations workflow built with [Agno](https://github.com/a
 
 ---
 
+## 🎬 Watch Demo on Youtube (click the image below)
+
+ 
+
+[![Watch the demo](https://img.youtube.com/vi/d2jB2-JTlPg/maxresdefault.jpg)](https://youtu.be/d2jB2-JTlPg)
+
+---
+
 ## Agent Architecture
 
 ```
