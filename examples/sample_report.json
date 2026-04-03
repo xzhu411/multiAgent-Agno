@@ -1,21 +1,128 @@
 {
-  "run_id": "920230d4",
-  "generated_at": "2026-04-02T07:14:28.172119+00:00",
+  "run_id": "1b1fed43",
+  "generated_at": "2026-04-03T10:39:58.731292+00:00",
   "pipeline_stats": {
-    "total_leads": 3,
-    "critical_count": 2,
+    "total_leads": 10,
+    "critical_count": 3,
     "high_count": 1,
-    "medium_count": 0,
-    "low_count": 0,
-    "total_pipeline_value": 615000.0,
-    "at_risk_value": 615000.0
+    "medium_count": 3,
+    "low_count": 3,
+    "total_pipeline_value": 1105500.0,
+    "at_risk_value": 835000.0
   },
   "ranked_actions": [
     {
       "scored_lead": {
         "lead": {
+          "id": "lead_010",
+          "name": "OmniCloud \u2014 Security Add-on",
+          "company": "OmniCloud",
+          "stage": "Proposal",
+          "deal_value": 32000.0,
+          "days_since_last_activity": 3,
+          "close_date_days_out": 14,
+          "num_touches": 11,
+          "owner": "Marcus Webb",
+          "notes": ""
+        },
+        "score": 81,
+        "risk_level": "low",
+        "risk_flags": [],
+        "score_rationale": "Well-engaged add-on with excellent touch count, fresh activity, and 2-week close window\u2014highest confidence execution in pipeline."
+      },
+      "actions": [
+        {
+          "priority": "this_week",
+          "action_type": "call",
+          "description": "Marcus Webb to confirm OmniCloud is ready to execute and secure final sign-off within 48 hours.",
+          "owner": "Marcus Webb"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "close",
+          "description": "Prepare and send final security add-on contract for immediate execution to land deal within 14 days.",
+          "owner": "Marcus Webb"
+        }
+      ],
+      "summary": "Highest-confidence deal with 11 touches, fresh activity, and 2-week close needs final push from Marcus Webb to execute."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_004",
+          "name": "Streamline Inc \u2014 Renewal",
+          "company": "Streamline Inc",
+          "stage": "Negotiation",
+          "deal_value": 75000.0,
+          "days_since_last_activity": 5,
+          "close_date_days_out": 6,
+          "num_touches": 18,
+          "owner": "Jordan Park",
+          "notes": ""
+        },
+        "score": 78,
+        "risk_level": "low",
+        "risk_flags": [
+          "close_date_imminent"
+        ],
+        "score_rationale": "Well-engaged renewal with strong touch count and recent activity closing in 6 days\u2014on track for timely close with low execution risk."
+      },
+      "actions": [
+        {
+          "priority": "this_week",
+          "action_type": "call",
+          "description": "Jordan Park to confirm Streamline Inc is ready to execute and provide final signed paperwork within 48 hours.",
+          "owner": "Jordan Park"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "close",
+          "description": "Prepare renewal contracts and execute close process to land deal by close date.",
+          "owner": "Jordan Park"
+        }
+      ],
+      "summary": "Well-engaged renewal on track to close in 6 days with strong momentum; Jordan Park should confirm execution and prepare final paperwork."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_007",
+          "name": "Vortex Systems \u2014 Expansion",
+          "company": "Vortex Systems",
+          "stage": "Proposal",
+          "deal_value": 95000.0,
+          "days_since_last_activity": 14,
+          "close_date_days_out": 21,
+          "num_touches": 9,
+          "owner": "Sarah Chen",
+          "notes": ""
+        },
+        "score": 68,
+        "risk_level": "low",
+        "risk_flags": [],
+        "score_rationale": "Mid-size deal in proposal stage with solid engagement history and 3-week close window\u2014healthy progression with consistent momentum."
+      },
+      "actions": [
+        {
+          "priority": "this_week",
+          "action_type": "email",
+          "description": "Sarah Chen to send Vortex Systems proposal status update with expansion roadmap and implementation timeline.",
+          "owner": "Sarah Chen"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "meeting",
+          "description": "Schedule brief check-in call with Vortex to confirm proposal fit and lock in 21-day close date.",
+          "owner": "Sarah Chen"
+        }
+      ],
+      "summary": "Healthy mid-size proposal with 9 touches and 3-week close window needs this-week status update from Sarah Chen to maintain momentum."
+    },
+    {
+      "scored_lead": {
+        "lead": {
           "id": "lead_001",
-          "name": "Acme Corp \u2014 Enterprise",
+          "name": "Acme Corp \u2014 Enterprise Expansion",
           "company": "Acme Corp",
           "stage": "Negotiation",
           "deal_value": 185000.0,
@@ -31,35 +138,142 @@
           "idle_30_days",
           "close_date_overdue"
         ],
-        "score_rationale": "Deal is 5 days overdue and hasn't been touched in 47 days; immediate follow-up needed to salvage this $185K negotiation."
+        "score_rationale": "Large deal in advanced stage but close date has passed and no activity in 47 days\u2014immediate follow-up required to prevent deal collapse."
       },
       "actions": [
         {
           "priority": "immediate",
           "action_type": "call",
-          "description": "Call Sarah Chen to assess deal status and determine if renegotiation, discount, or contract revision is needed to close the overdue $185K Acme Corp deal",
+          "description": "Sarah Chen to call Acme Corp decision-maker today to understand close delay, address blockers, and set firm new close date or escalate.",
           "owner": "Sarah Chen"
         },
         {
           "priority": "immediate",
           "action_type": "escalate",
-          "description": "Escalate to sales leadership if Acme Corp is unresponsive; prepare win-back strategy or discount offer to recover the stalled negotiation",
-          "owner": "Sales Manager"
+          "description": "Escalate to sales leadership if Sarah cannot reach contact within 2 hours to prevent deal loss.",
+          "owner": "Sarah Chen"
         },
         {
-          "priority": "this_week",
+          "priority": "immediate",
           "action_type": "email",
-          "description": "Send executive summary email outlining final terms and next steps, setting a hard deadline for signature to reinvigorate momentum",
+          "description": "Send executive summary email recapping proposal value and urgency to unblock stalled negotiation.",
           "owner": "Sarah Chen"
         }
       ],
-      "summary": "Immediate leadership intervention and direct outreach required to salvage this overdue $185K negotiation from stalling."
+      "summary": "High-value deal past close date with 47 days idle requires immediate direct outreach and escalation to Sarah Chen to resurrect or formally close."
     },
     {
       "scored_lead": {
         "lead": {
-          "id": "lead_003",
-          "name": "GlobeTech \u2014 Platform",
+          "id": "lead_005",
+          "name": "PinPoint Analytics \u2014 Pilot",
+          "company": "PinPoint Analytics",
+          "stage": "Proposal",
+          "deal_value": 48000.0,
+          "days_since_last_activity": 22,
+          "close_date_days_out": 18,
+          "num_touches": 6,
+          "owner": "Marcus Webb",
+          "notes": ""
+        },
+        "score": 54,
+        "risk_level": "medium",
+        "risk_flags": [
+          "idle_21_days"
+        ],
+        "score_rationale": "Moderate deal with decent engagement showing slight inactivity over 22 days\u2014needs check-in to confirm proposal status and timeline before momentum fades."
+      },
+      "actions": [
+        {
+          "priority": "this_week",
+          "action_type": "email",
+          "description": "Marcus Webb to send proposal status check-in email with pilot success metrics and next steps.",
+          "owner": "Marcus Webb"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "meeting",
+          "description": "Schedule brief call with PinPoint Analytics to confirm proposal reception, address questions, and lock in 18-day close timeline.",
+          "owner": "Marcus Webb"
+        }
+      ],
+      "summary": "Moderate proposal with slight inactivity needs this-week check-in from Marcus Webb to confirm status and maintain 18-day close momentum."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_009",
+          "name": "MindBridge \u2014 Starter Plan",
+          "company": "MindBridge",
+          "stage": "Qualification",
+          "deal_value": 8500.0,
+          "days_since_last_activity": 7,
+          "close_date_days_out": 30,
+          "num_touches": 5,
+          "owner": "Jordan Park",
+          "notes": ""
+        },
+        "score": 52,
+        "risk_level": "medium",
+        "risk_flags": [],
+        "score_rationale": "Small deal with recent activity and reasonable timeline showing steady but modest progress\u2014continue nurturing through qualification."
+      },
+      "actions": [
+        {
+          "priority": "this_week",
+          "action_type": "email",
+          "description": "Jordan Park to send MindBridge starter plan ROI summary and customer success story from similar SMB.",
+          "owner": "Jordan Park"
+        },
+        {
+          "priority": "this_month",
+          "action_type": "meeting",
+          "description": "Schedule brief qualification call to confirm starter plan fit, budget approval, and 30-day close feasibility.",
+          "owner": "Jordan Park"
+        }
+      ],
+      "summary": "Small deal with recent activity and steady progress should continue nurture cadence from Jordan Park through 30-day qualification."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_006",
+          "name": "ClearPath Logistics \u2014 SMB",
+          "company": "ClearPath Logistics",
+          "stage": "Prospecting",
+          "deal_value": 12000.0,
+          "days_since_last_activity": 2,
+          "close_date_days_out": 60,
+          "num_touches": 4,
+          "owner": "Jordan Park",
+          "notes": ""
+        },
+        "score": 50,
+        "risk_level": "medium",
+        "risk_flags": [],
+        "score_rationale": "Early-stage SMB prospect with recent activity and reasonable timeline but low deal value and minimal touches\u2014standard prospecting cadence appropriate."
+      },
+      "actions": [
+        {
+          "priority": "this_week",
+          "action_type": "email",
+          "description": "Jordan Park to send ClearPath Logistics tailored product overview addressing SMB logistics challenges.",
+          "owner": "Jordan Park"
+        },
+        {
+          "priority": "this_month",
+          "action_type": "meeting",
+          "description": "Schedule discovery call to understand ClearPath's current pain points and fit for 60-day sales cycle.",
+          "owner": "Jordan Park"
+        }
+      ],
+      "summary": "Early-stage SMB prospect with fresh activity should continue standard prospecting cadence from Jordan Park toward 60-day close."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_002",
+          "name": "GlobeTech \u2014 Platform License",
           "company": "GlobeTech",
           "stage": "Proposal",
           "deal_value": 120000.0,
@@ -75,34 +289,34 @@
           "idle_30_days",
           "close_date_imminent"
         ],
-        "score_rationale": "Close date is 4 days away but no activity in 33 days; critical intervention needed to keep this deal on track or confirm if it's truly closed."
+        "score_rationale": "Close date is in 4 days with no activity in 33 days and minimal engagement\u2014critical intervention needed to push deal across finish line or reset expectations."
       },
       "actions": [
         {
           "priority": "immediate",
           "action_type": "call",
-          "description": "Call Marcus Webb immediately to confirm GlobeTech's proposal status and signature readiness before the 4-day close deadline",
+          "description": "Marcus Webb must call GlobeTech contact immediately to confirm close readiness, obtain final approval, or negotiate revised close date.",
           "owner": "Marcus Webb"
         },
         {
           "priority": "immediate",
-          "action_type": "meeting",
-          "description": "Schedule emergency call with GlobeTech decision-maker to address any outstanding concerns, objections, or next steps required to close",
+          "action_type": "escalate",
+          "description": "Escalate to VP of Sales if contact unreachable; prepare to reset close date or move to Closed Lost.",
           "owner": "Marcus Webb"
         },
         {
           "priority": "immediate",
-          "action_type": "close",
-          "description": "If GlobeTech is ready, send final contract and coordinate signature; if blocked, identify blocker and deploy discount or escalation as needed",
+          "action_type": "email",
+          "description": "Send time-sensitive email with final proposal, execution steps, and close deadline to trigger urgency.",
           "owner": "Marcus Webb"
         }
       ],
-      "summary": "Critical: Urgent intervention required within 48 hours to either close this $120K deal or determine if close date must be revised."
+      "summary": "Critical deal closing in 4 days with 33 days inactivity and minimal touches requires emergency intervention by Marcus Webb to push across finish line."
     },
     {
       "scored_lead": {
         "lead": {
-          "id": "lead_002",
+          "id": "lead_008",
           "name": "DataHarbor \u2014 Enterprise",
           "company": "DataHarbor",
           "stage": "Qualification",
@@ -119,37 +333,76 @@
           "idle_30_days",
           "high_value_early_stage"
         ],
-        "score_rationale": "High-value $310K opportunity stuck in Qualification with minimal engagement and no owner assigned; needs immediate ownership and acceleration."
+        "score_rationale": "Largest opportunity stuck in qualification with only 2 touches and 38 days idle, plus unassigned ownership\u2014assign owner immediately and re-qualify to rescue this deal."
       },
       "actions": [
         {
           "priority": "immediate",
           "action_type": "escalate",
-          "description": "Assign this unowned $310K DataHarbor opportunity to a senior account executive immediately and schedule discovery kickoff",
-          "owner": "Sales Manager"
+          "description": "Escalate to VP Sales immediately to assign dedicated owner and commit resources to rescue $310K enterprise opportunity.",
+          "owner": "Unassigned"
+        },
+        {
+          "priority": "immediate",
+          "action_type": "call",
+          "description": "Newly assigned owner to call DataHarbor stakeholder today to re-establish relationship and begin re-qualification process.",
+          "owner": "Unassigned"
+        },
+        {
+          "priority": "this_week",
+          "action_type": "meeting",
+          "description": "Schedule enterprise discovery meeting with DataHarbor stakeholders to confirm needs, budget, and decision timeline.",
+          "owner": "Unassigned"
+        }
+      ],
+      "summary": "Critical largest deal stalled in qualification with only 2 touches and unassigned ownership requires immediate owner assignment and emergency re-engagement."
+    },
+    {
+      "scored_lead": {
+        "lead": {
+          "id": "lead_003",
+          "name": "NovaBuild \u2014 Annual Contract",
+          "company": "NovaBuild",
+          "stage": "Qualification",
+          "deal_value": 220000.0,
+          "days_since_last_activity": 52,
+          "close_date_days_out": 30,
+          "num_touches": 1,
+          "owner": "Sarah Chen",
+          "notes": ""
+        },
+        "score": 37,
+        "risk_level": "critical",
+        "risk_flags": [
+          "idle_30_days",
+          "low_touches",
+          "high_value_early_stage"
+        ],
+        "score_rationale": "High-value opportunity stalled in early stage with only 1 touch and 52 days idle\u2014needs immediate re-engagement to maintain momentum and qualify opportunity."
+      },
+      "actions": [
+        {
+          "priority": "immediate",
+          "action_type": "call",
+          "description": "Sarah Chen to call NovaBuild primary contact to rebuild relationship, understand current priorities, and re-qualify opportunity.",
+          "owner": "Sarah Chen"
         },
         {
           "priority": "immediate",
           "action_type": "meeting",
-          "description": "Schedule executive qualification meeting with DataHarbor stakeholders within 48 hours to understand requirements, timeline, and decision criteria",
-          "owner": "Account Executive TBD"
+          "description": "Schedule discovery meeting with NovaBuild stakeholders to confirm needs, timeline, and decision process for annual contract.",
+          "owner": "Sarah Chen"
         },
         {
           "priority": "this_week",
           "action_type": "email",
-          "description": "Send personalized outreach introducing assigned account executive and requesting 30-minute call to align on solution fit and next steps",
-          "owner": "Account Executive TBD"
-        },
-        {
-          "priority": "this_week",
-          "action_type": "nurture",
-          "description": "Deliver targeted case study and ROI analysis relevant to DataHarbor's industry segment to demonstrate value and accelerate qualification",
-          "owner": "Account Executive TBD"
+          "description": "Send personalized value summary email highlighting ROI and implementation roadmap for NovaBuild's use case.",
+          "owner": "Sarah Chen"
         }
       ],
-      "summary": "Critical: Immediately assign owner and launch aggressive qualification campaign to accelerate this high-value early-stage opportunity."
+      "summary": "Critical high-value deal stalled at qualification with only 1 touch in 52 days requires immediate Sarah Chen outreach to re-qualify and accelerate engagement."
     }
   ],
-  "executive_summary": "Pipeline health is critical: all three leads ($615K total) are at risk due to extended inactivity (33\u201347 days without engagement) despite active sales effort or imminent close dates. Two deals are overdue or within 4 days of deadline (Acme Corp and GlobeTech), while the largest opportunity (DataHarbor, $310K) remains unowned and stalled in early qualification. Immediate leadership intervention is required across all three accounts to either salvage negotiation momentum, confirm close readiness, or deploy ownership and acceleration resources within the next 48 hours.",
-  "review_notes": "\u2022 DataHarbor ($310K, Unassigned) represents 50% of pipeline value with zero owner accountability and minimal touches (2)\u2014assign a senior AE immediately to prevent further drift. \u2022 Acme Corp deal is 5 days overdue with 47 days of silence; prepare win-back or discount strategy to recover or formally close-lost. \u2022 All three leads show >30 days idle despite varying stages, indicating systemic engagement breakdown\u2014consider pipeline health KPI audit."
+  "executive_summary": "The pipeline totals $1.1M across 10 leads with concerning health: 3 critical deals ($550K combined) are stalled or unassigned at advanced/early stages, representing 75% of at-risk value ($835K). Two overdue/near-close large deals (Acme $185K, GlobeTech $120K) plus the unassigned DataHarbor enterprise opportunity ($310K) demand immediate executive intervention today. Meanwhile, 5 healthy deals totaling $255K (OmniCloud, Streamline, Vortex, PinPoint, MindBridge) are tracking normally and should close within 6-30 days if current momentum holds.",
+  "review_notes": "Critical risks flagged: (1) DataHarbor ($310K, largest deal) is completely unassigned in qualification with only 2 touches and 38 days idle\u2014VP Sales must assign dedicated owner immediately; (2) Two overdue/imminent deals (Acme -5 days, GlobeTech 4 days, $305K combined) require emergency Sarah Chen and Marcus Webb outreach within 2 hours or formal escalation; (3) NovaBuild ($220K) stuck in qualification with only 1 touch in 52 days\u2014needs full re-engagement cycle. At-risk value of $835K (75% of pipeline) is concentrated in these 3 critical deals; loss of any would materially impact quarterly close."
 }
