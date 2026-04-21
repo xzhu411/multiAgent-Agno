@@ -1,6 +1,5 @@
 # RevOps Multi-Agent Pipeline (Agno)
 
-**Track: Option D — Operators Team (Revenue Operations)**
 
 A multi-agent Revenue Operations workflow built with [Agno](https://github.com/agno-agi/agno). Ingests raw CRM data, scores leads, flags at-risk pipeline opportunities, and produces a prioritized action plan for the sales ops team.
 
